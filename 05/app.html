@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+
+<!--
+	<option-box [value]="value" (value)="value = $event">
+	<option-box [(value)]="value">
+	<option-box bindon-value="value">
+-->
+
+<div>
+	<option-box [(value)]="value">
+		
+		<option-item #i1 value="1" (change)="change($event, i1.selected)">
+			<span class="label">Per Express</span>
+			<span class="text">Schnelle Lieferung</span>
+		</option-item>
+		
+		<option-item #i2 value="2" (change)="change($event, i2.selected)">
+			<span class="label">Per Einschreiben</span>
+			<span class="text">Sichere und schnelle Lieferung</span>
+		</option-item>
+		
+	</option-box>
+	
+</div> 
+
+<div>
+	Value: {{ value }}	
+</div>

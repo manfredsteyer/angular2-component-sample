@@ -1,0 +1,12 @@
+<style>
+	@import url('option-item.css');
+</style>
+
+<div 
+	[class.itemOn]="selected" 
+	[class.itemOff]="!selected"
+    (^click)="select()"> 
+	
+	 <ng-content></ng-content> <span *ng-if="selected">*</span>
+        
+</div>

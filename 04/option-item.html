@@ -1,0 +1,36 @@
+<style>
+
+.itemOff {
+    border: 2px solid black;
+    height:25px;
+    width:250px;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+
+    margin-bottom:5px;
+}
+
+.itemOn {
+    border: 2px solid black;
+    height: 25px;
+    width: 250px;
+    background-color: lightblue;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+
+    margin-bottom:5px;
+}
+</style>
+
+<div 
+	[class.itemOn]="selected" 
+	[class.itemOff]="!selected"> <!-- TODO: Geht das schöner ? -->
+	
+		<a (click)="select()"> <ng-content></ng-content> <span *ng-if="selected">*</span></a> 
+        
+        <!-- TODO: Programmatische Transclusion (Content Reprojection) ?  -->
+		
+</div>

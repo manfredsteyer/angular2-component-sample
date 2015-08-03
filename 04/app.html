@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+<!--
+	<option-box [value]="id" (value)="id = $event">
+	<option-box [(value)]="id">
+	<option-box bindon-value="id">
+-->
+
+<div>
+	<option-box [(value)]="id">
+		<option-item #i1 value="1" (change)="change($event, i1.selected)">Per Express</option-item>
+		<option-item #i2 value="2" (change)="change($event, i2.selected)">Per Einschreiben</option-item>
+	</option-box>
+</div> 
+
+<div>
+	Value: {{ id }}	
+</div>

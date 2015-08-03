@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+<div>
+	<option-box [value]="value" (value)="setValue($event)">
+		<option-item #i1 value="1" [selected]="true" (change)="change($event, i1.selected)">Per Express</option-item>
+		<option-item #i2 value="2" [selected]="false" (change)="change($event, i2.selected)">Per Einschreiben</option-item>
+	</option-box>
+</div> 
+
+<div>
+	Value: {{ value }}	
+</div>
+
+<div>
+
+	<a (click)="reset()">Reset</a>
+	
+</div>
