@@ -15,11 +15,11 @@ var option_box_1 = require('option-box');
 // Annotation section
 var AppComponent = (function () {
     function AppComponent() {
-        this.value = "2";
+        this.id = "2";
         this.title = 'Component-Demo';
     }
-    AppComponent.prototype.setValue = function (value) {
-        this.value = value;
+    AppComponent.prototype.setId = function (id) {
+        this.id = id;
     };
     AppComponent.prototype.change = function (event, info) {
         console.log('change!');
