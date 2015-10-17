@@ -1,1 +1,1 @@
-# angular2-component-sample
+# Angular2-Component-Sample
